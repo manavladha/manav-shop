@@ -61,7 +61,7 @@ export default function ProfileHeader() {
           }
         />
         <SocialButton
-          href="https://wa.me/919999999999"
+          href="https://wa.me/919782519798"
           bg="#7BE495"
           label="WhatsApp"
           icon={
@@ -71,7 +71,7 @@ export default function ProfileHeader() {
           }
         />
         <SocialButton
-          href="mailto:manav@regie.ai"
+          href="mailto:manavladha6627@gmail.com"
           bg="#5CC8FF"
           label="Email"
           icon={
