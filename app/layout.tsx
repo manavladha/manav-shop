@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import { Space_Grotesk, DM_Sans, Press_Start_2P } from "next/font/google";
 import "./globals.css";
 import BottomNav from "@/components/BottomNav";
@@ -49,6 +50,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col bg-[#FFF4D8]">
         <main className="flex-1 max-w-lg mx-auto w-full pb-20">{children}</main>
         <BottomNav />
+        <Analytics />
       </body>
     </html>
   );
