@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Image from "next/image";
 
 export default function ProfileHeader() {
   return (
@@ -15,10 +15,13 @@ export default function ProfileHeader() {
           className="relative flex-shrink-0 w-[72px] h-[72px] rounded-2xl border-ink shadow-card overflow-hidden bg-[#FFD84D]"
           style={{ border: "2.5px solid #1E1E1E", boxShadow: "4px 4px 0px #1E1E1E" }}
         >
-          {/* Avatar initials fallback */}
-          <div className="w-full h-full flex items-center justify-center font-display font-bold text-2xl text-[#1E1E1E]">
-            ML
-          </div>
+          <Image
+            src="/manav.png"
+            alt="Manav Ladha"
+            width={72}
+            height={72}
+            className="w-full h-full object-cover object-top"
+          />
         </div>
 
         <div>
