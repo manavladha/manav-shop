@@ -53,7 +53,6 @@ export default function PortfolioPage() {
         subtext={cta.subtext}
         email={cta.email}
         instagram={cta.instagram}
-        whatsapp={cta.whatsapp}
       />
     </>
   );
