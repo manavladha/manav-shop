@@ -1,4 +1,6 @@
+"use client";
 import Image from "next/image";
+import { track } from "@vercel/analytics";
 
 export interface Product {
   id: string;
@@ -125,6 +127,12 @@ export default function ProductCard({ product }: { product: Product }) {
             href={product.buyLink}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => track("product_click", {
+              id: product.id,
+              title: product.title,
+              category: product.category,
+              platform: product.platform,
+            })}
             className="btn-arcade w-full flex items-center justify-center gap-1.5 py-2.5 rounded-xl font-display font-bold text-[13px] bg-[#FFD84D] text-[#1E1E1E]"
             style={{ border: "2px solid #1E1E1E" }}
           >

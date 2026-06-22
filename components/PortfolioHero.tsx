@@ -1,4 +1,6 @@
+"use client";
 import Image from "next/image";
+import { track } from "@vercel/analytics";
 
 export default function PortfolioHero({
   title,
@@ -42,7 +44,8 @@ export default function PortfolioHero({
 
       {/* Manav Ladha card */}
       <div
-        className="mt-6 flex items-center justify-between gap-3 bg-white px-4 py-3 rounded-2xl"
+        onClick={() => track("portfolio_open_click")}
+        className="mt-6 flex items-center justify-between gap-3 bg-white px-4 py-3 rounded-2xl cursor-pointer"
         style={{ border: "2.5px solid #1E1E1E", boxShadow: "4px 4px 0px #1E1E1E" }}
       >
         <div
