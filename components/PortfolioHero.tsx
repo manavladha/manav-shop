@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function PortfolioHero({
   title,
   subtext,
@@ -44,10 +46,16 @@ export default function PortfolioHero({
         style={{ border: "2.5px solid #1E1E1E", boxShadow: "4px 4px 0px #1E1E1E" }}
       >
         <div
-          className="w-10 h-10 rounded-xl bg-[#FFD84D] flex items-center justify-center font-display font-bold text-[16px] text-[#1E1E1E] flex-shrink-0"
+          className="w-10 h-10 rounded-xl overflow-hidden flex-shrink-0"
           style={{ border: "2px solid #1E1E1E" }}
         >
-          ML
+          <Image
+            src="/manav.png"
+            alt="Manav Ladha"
+            width={40}
+            height={40}
+            className="w-full h-full object-cover object-top"
+          />
         </div>
         <div>
           <p className="font-display font-bold text-[15px] text-[#1E1E1E] leading-tight">

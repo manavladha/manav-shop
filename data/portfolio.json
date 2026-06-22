@@ -6,14 +6,14 @@
   "metrics": [
     {
       "id": "followers",
-      "value": "12k+",
+      "value": "15.5k+",
       "label": "Followers",
       "icon": "👥",
       "accent": "yellow"
     },
     {
       "id": "views",
-      "value": "38M+",
+      "value": "40M+",
       "label": "Views in 60 days",
       "icon": "👁️",
       "accent": "red"
