@@ -1,12 +1,10 @@
 import type { Product } from "@/components/ProductCard";
-import productsJson from "@/data/products.json";
 
 const SHEET_ID = process.env.GOOGLE_SHEET_ID ?? "1lqqg31prkXGnzq_eeufYInO0D884TKWhkuNf5fFNbdc";
 const SHEET_GID = process.env.GOOGLE_SHEET_GID ?? "0";
 
 /**
- * Returns products from Google Sheets if GOOGLE_SHEET_ID is set,
- * otherwise falls back to data/products.json (useful for local dev).
+ * Fetches products from Google Sheets.
  *
  * Sheet column order (row 1 must be these exact headers):
  * id | title | category | price | image | buyLink | platform | tags | isFeatured | isSponsored | badge | createdAt
@@ -20,10 +18,6 @@ const SHEET_GID = process.env.GOOGLE_SHEET_GID ?? "0";
  * badge: optional — one of  NEW | VIRAL | FROM REEL  (leave blank for none)
  */
 export async function getProducts(): Promise<Product[]> {
-  if (!SHEET_ID) {
-    return productsJson.products as Product[];
-  }
-
   const sheetUrl =
     `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=${SHEET_GID}`;
 
@@ -32,8 +26,8 @@ export async function getProducts(): Promise<Product[]> {
   });
 
   if (!res.ok) {
-    console.error(`Sheet fetch failed: ${res.status}. Falling back to JSON.`);
-    return productsJson.products as Product[];
+    console.error(`Sheet fetch failed: ${res.status}`);
+    return [];
   }
 
   const csv = await res.text();
