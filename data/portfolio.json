@@ -1,0 +1,64 @@
+{
+  "hero": {
+    "title": "I create viral gadget, toy & lifestyle content.",
+    "subtext": "I help brands turn fun products into scroll-stopping reels, UGC videos, and shoppable Instagram content."
+  },
+  "metrics": [
+    {
+      "id": "followers",
+      "value": "12k+",
+      "label": "Followers",
+      "icon": "👥",
+      "accent": "yellow"
+    },
+    {
+      "id": "views",
+      "value": "38M+",
+      "label": "Views in 60 days",
+      "icon": "👁️",
+      "accent": "red"
+    },
+    {
+      "id": "niche",
+      "value": "Gadgets",
+      "label": "Toys · Gifting · Lifestyle",
+      "icon": "🎯",
+      "accent": "blue"
+    }
+  ],
+  "brands": {
+    "title": "Brands I've played with",
+    "list": [
+      { "id": "flipkart", "name": "Flipkart", "emoji": "🛒" },
+      { "id": "lego", "name": "LEGO", "emoji": "🧱" },
+      { "id": "swish", "name": "Swish", "emoji": "✨" },
+      { "id": "blur-india", "name": "Blur India", "emoji": "📸" },
+      { "id": "not", "name": "NOT", "emoji": "🎧" },
+      { "id": "lucca", "name": "Lucca", "emoji": "💼" },
+      { "id": "kidology", "name": "Kidology", "emoji": "🧸" }
+    ]
+  },
+  "formats": {
+    "title": "What I create",
+    "list": [
+      { "id": "reels", "label": "Product Demo Reels", "icon": "🎬" },
+      { "id": "ugc", "label": "UGC Videos", "icon": "📱" },
+      { "id": "unboxing", "label": "Unboxing Videos", "icon": "📦" },
+      { "id": "stories", "label": "Instagram Stories", "icon": "⭐" },
+      { "id": "raw", "label": "Raw Footage", "icon": "🎥" },
+      { "id": "usage", "label": "Usage / Ad Rights", "icon": "📋" }
+    ]
+  },
+  "cta": {
+    "title": "Want to collab?",
+    "subtext": "Let's make something your audience won't scroll past.",
+    "email": "manav@regie.ai",
+    "instagram": "https://instagram.com/manavladha",
+    "whatsapp": "https://wa.me/919999999999"
+  },
+  "contact": {
+    "email": "manav@regie.ai",
+    "instagram": "https://instagram.com/manavladha",
+    "whatsapp": "https://wa.me/919999999999"
+  }
+}
