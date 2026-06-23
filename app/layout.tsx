@@ -30,6 +30,10 @@ export const metadata: Metadata = {
   title: "Manav Ladha — Shop & Portfolio",
   description:
     "Cool gadgets, toys, collectibles & gifting finds from my reels. Creator portfolio & media kit.",
+  icons: {
+    icon: "/manav.png",
+    apple: "/manav.png",
+  },
   openGraph: {
     title: "Manav Ladha — Shop & Portfolio",
     description: "Cool gadgets, toys, collectibles & gifting finds from my reels.",
