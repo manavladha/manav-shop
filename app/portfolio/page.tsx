@@ -4,14 +4,40 @@ import MetricsSection from "@/components/MetricsSection";
 import BrandLogos from "@/components/BrandLogos";
 import CTASection from "@/components/CTASection";
 
-export default function PortfolioPage() {
+export const revalidate = 3600;
+
+function formatFollowers(count: number): string {
+  const val = Math.floor(count / 100) / 10;
+  return (val % 1 === 0 ? val.toFixed(0) : val.toFixed(1)) + "k+";
+}
+
+export default async function PortfolioPage() {
   const { hero, metrics, brands, formats, cta } = portfolioData;
+
+  let followersValue = metrics.find((m) => m.id === "followers")?.value ?? "23k+";
+  try {
+    const res = await fetch("https://followers-2papqmteka-uc.a.run.app/", {
+      next: { revalidate: 3600 },
+    });
+    if (res.ok) {
+      const data = await res.json();
+      if (typeof data.followers_count === "number") {
+        followersValue = formatFollowers(data.followers_count);
+      }
+    }
+  } catch {
+    // keep static fallback
+  }
+
+  const liveMetrics = metrics.map((m) =>
+    m.id === "followers" ? { ...m, value: followersValue } : m
+  );
 
   return (
     <>
       <PortfolioHero title={hero.title} subtext={hero.subtext} />
 
-      <MetricsSection metrics={metrics} />
+      <MetricsSection metrics={liveMetrics} />
 
       {/* What I create section */}
       <div className="px-4 py-4">
