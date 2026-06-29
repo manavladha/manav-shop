@@ -48,26 +48,28 @@ export default function PortfolioHero({
         className="mt-6 flex items-center justify-between gap-3 bg-white px-4 py-3 rounded-2xl cursor-pointer"
         style={{ border: "2.5px solid #1E1E1E", boxShadow: "4px 4px 0px #1E1E1E" }}
       >
-        <div
-          className="w-10 h-10 rounded-xl overflow-hidden flex-shrink-0"
-          style={{ border: "2px solid #1E1E1E" }}
-        >
-          <Image
-            src="/manav.png"
-            alt="Manav Ladha"
-            width={40}
-            height={40}
-            className="w-full h-full object-cover object-top"
-          />
-        </div>
-        <div>
-          <p className="font-display font-bold text-[15px] text-[#1E1E1E] leading-tight">
-            Manav Ladha
-          </p>
-          <p className="font-body text-[12px] text-[#1E1E1E]/50">@manavladha · Creator</p>
+        <div className="flex items-center gap-3">
+          <div
+            className="w-10 h-10 rounded-xl overflow-hidden flex-shrink-0"
+            style={{ border: "2px solid #1E1E1E" }}
+          >
+            <Image
+              src="/manav.png"
+              alt="Manav Ladha"
+              width={40}
+              height={40}
+              className="w-full h-full object-cover object-top"
+            />
+          </div>
+          <div>
+            <p className="font-display font-bold text-[15px] text-[#1E1E1E] leading-tight">
+              Manav Ladha
+            </p>
+            <p className="font-body text-[12px] text-[#1E1E1E]/50">@manavladha · Creator</p>
+          </div>
         </div>
         <span
-          className="ml-2 font-pixel text-[8px] bg-[#7BE495] text-[#1E1E1E] px-2 py-1 rounded"
+          className="font-pixel text-[8px] bg-[#7BE495] text-[#1E1E1E] px-2 py-1 rounded flex-shrink-0"
           style={{ border: "1.5px solid #1E1E1E" }}
         >
           ✦ OPEN
